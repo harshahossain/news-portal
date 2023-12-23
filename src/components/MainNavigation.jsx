@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-function MainNavigation() {
+function MainNavigation({ setCategory }) {
   return (
     <nav
       className="navbar navbar-expand-lg bg-body-tertiary"
@@ -18,14 +18,53 @@ function MainNavigation() {
                 Home
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink
-                className="nav-link active"
-                aria-current="page"
-                to="contact"
+            <li class="nav-item">
+              <button
+                class="nav-link active"
+                onClick={() => setCategory("technology")}
               >
-                Contact Us
-              </NavLink>
+                Technology
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link active"
+                onClick={() => setCategory("business")}
+              >
+                Business
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link active"
+                onClick={() => setCategory("health")}
+              >
+                Health
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link active"
+                onClick={() => setCategory("science")}
+              >
+                Science
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link active"
+                onClick={() => setCategory("sports")}
+              >
+                Sports
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link active"
+                onClick={() => setCategory("entertainment")}
+              >
+                Entertainment
+              </button>
             </li>
           </ul>
           <ul className="d-flex">
