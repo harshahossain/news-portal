@@ -1,11 +1,24 @@
-import { useState } from "react";
-
 import "./App.css";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import RootLayout from "./pages/Root";
+import HomePage from "./pages/Home";
+import ContactPage from "./pages/Contact";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <></>;
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <RootLayout />,
+      children: [
+        { index: true, element: <HomePage /> },
+        {
+          path: "contact",
+          element: <ContactPage />,
+        },
+      ],
+    },
+  ]);
+  return <RouterProvider router={router} />;
 }
 
 export default App;
