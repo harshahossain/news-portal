@@ -1,10 +1,11 @@
 import { NavLink } from "react-router-dom";
-
+import "./MainNavigation.css";
 function MainNavigation({ setCategory }) {
   return (
     <nav
       className="navbar navbar-expand-lg bg-body-tertiary"
       data-bs-theme="dark"
+      id="nav"
     >
       <div className="container-fluid">
         <NavLink to="/" className="navbar-brand">
@@ -73,6 +74,7 @@ function MainNavigation({ setCategory }) {
                 className="nav-link text-light me-2"
                 aria-current="page"
                 to="contact"
+                id="contact"
               >
                 Contact Us
               </NavLink>

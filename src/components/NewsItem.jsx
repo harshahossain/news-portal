@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import Image from "../assets/nesw.jpg";
+import "./NewsItem.css";
+
 export const NewsItem = ({
   title,
   description,
@@ -23,7 +25,7 @@ export const NewsItem = ({
       />
       <div className="card-body">
         <h5 className="card-title fs-4">{title.slice(0, 50)}</h5>
-        <p className="card-text fst-italic">
+        <p className="card-text fst-italic" id="pbInfo">
           <span className="fw-semibold fs-6">
             {author ? `${author} - ` : ""}
           </span>{" "}

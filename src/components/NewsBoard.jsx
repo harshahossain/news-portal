@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { NewsItem } from "./NewsItem";
+import "./NewsBoard.css";
 
 export const NewsBoard = ({ category }) => {
   const [articles, setArticles] = useState([]);
@@ -15,7 +16,7 @@ export const NewsBoard = ({ category }) => {
   }, [category]);
   return (
     <div>
-      <h2 className="text-center">
+      <h2 className="text-center" id="latestNews">
         Latest <span className="text-center badge bg-dark">News</span>
       </h2>
       {articles.map((news, idx) => {
